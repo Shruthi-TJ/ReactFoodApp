@@ -1,11 +1,11 @@
-import ResturantCard from './ResturantCard'
+import RestaurantCard from './RestaurantCard'
 import resList from '../utils/mock'
 import {useEffect, useState} from 'react';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
 
 const Body = () => {
-//local state varibale
+//local state variable
 let [ListOfRes, setListOfRes] = useState([])
 const [FinalFilList, setFinalFilList]= useState([])
 const [searchText, setsearchText]=useState("")
@@ -50,7 +50,7 @@ if(ListOfRes.length===0){
             }}>Top Rated </button></div>
             <div className="res-container">
                 {
-                   FinalFilList.map((restaurant)=> (<Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id} className='res-card'><ResturantCard resData={restaurant}/></Link>)
+                   FinalFilList.map((restaurant)=> (<Link key={restaurant.info.id} to={"/restaurants/" + restaurant.info.id} className='res-card'><RestaurantCard resData={restaurant}/></Link>)
                     )}
             </div>
         </div>
